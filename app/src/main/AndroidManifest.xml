@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.directlineex.brsingh.directlineandroidexample">
+    //General permissions
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    //required for Juspay to read the OTP from the SMS sent to the device
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <!-- To run a bot you need Internet permissions-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <receiver android:process=":remote" android:name=".Alarm"></receiver>
+
+    <application
+        android:name="com.instamojo.android.InstamojoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ChatActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data android:name="botPrimaryToken" android:value="YYaObpCAW_A.cwA.q-M.TgcrQ_ITCZFKLKs7QFLQwYc5jq10U-BqVV7PGwmpYfU"/>
+        <meta-data android:name="botName" android:value="paybot_93cRiLpv9AM"/>
+
+    </application>
+
+
+</manifest>
